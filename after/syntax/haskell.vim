@@ -36,8 +36,8 @@ endif
 
 " vim: set fenc=utf-8:
 syntax match hsNiceOperator "\\\ze[[:alpha:][:space:]_([]" conceal cchar=λ
-syntax match hsNiceOperator "<-" conceal cchar=←
-syntax match hsNiceOperator "->" conceal cchar=→
+syntax match hsNiceOperator "<-\ze[^>]" conceal cchar=←
+syntax match hsNiceOperator "[^<]\zs->" conceal cchar=→
 syntax match hsNiceOperator "\~>" conceal cchar=↝
 syntax match hsNiceOperator "\<sum\>" conceal cchar=∑
 syntax match hsNiceOperator "\<product\>" conceal cchar=∏
